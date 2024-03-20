@@ -1,0 +1,37 @@
+theme "catppuccin-mocha"
+
+pane_frames false
+
+keybinds {
+    unbind "Ctrl q" // Disable quit to prevent accidentally closing
+
+    // Prevent override vim "back"
+    session {
+       unbind "Ctrl o"
+    }
+    shared_except "session" "locked" {
+        unbind "Ctrl o"
+        bind "Ctrl x" { SwitchToMode "Session"; }
+    }
+
+
+    // Prevent override vim "next item"
+    unbind "Ctrl n"
+    shared_except "resize" "locked" {
+        unbind "Ctrl n"
+        bind "Ctrl r" { SwitchToMode "Resize"; }
+    }
+
+
+    // Prevent override vim "previous item"
+    unbind "Ctrl p"
+    unbind "Ctrl g"
+    pane {
+        unbind "Ctrl p"
+        bind "Ctrl g" { SwitchToMode "Normal";  }
+    }
+    shared_except "pane" "locked" {
+        unbind "Ctrl p"
+        bind "Ctrl g" { SwitchToMode "Pane"; }
+    }
+}

@@ -1,0 +1,5 @@
+# Dotfiles
+
+## Configs
+ - Wezterm
+ - Zellij
