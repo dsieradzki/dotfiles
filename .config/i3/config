@@ -36,8 +36,8 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id nm-applet
 
 # Gaps
-gaps inner 10
-gaps top 5
+#gaps inner 10
+#gaps top 5
 
 default_border pixel
 
