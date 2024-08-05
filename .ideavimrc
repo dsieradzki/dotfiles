@@ -12,6 +12,9 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
+" Setup leader key
+let mapleader = " "
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -25,18 +28,28 @@ map Q gq
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
-let mapleader = " "
+
+
+" Keybinding setup like Neovim Kickstarter
+"
 nmap <leader>no :NERDTreeFocus<CR>
 nmap <leader>nc :NERDTreeClose<CR>
 
-" LSP like bindings
 nmap <leader>la <Action>(Refactorings.QuickListPopupAction)
 vmap <leader>la <Action>(Refactorings.QuickListPopupAction)
 
-nmap <leader>lr <Action>(RenameElement)
-vmap <leader>lr <Action>(RenameElement)
+nmap <leader>rn <Action>(RenameElement)
+vmap <leader>rn <Action>(RenameElement)
 
 nmap gI <Action>(GotoImplementation)
+
+nmap <leader>sg <Action>(FindInPath)
+nmap / <Action>(Find)
+nmap gr <Action>(ShowUsages)
+
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ds <Action>(GotoSymbol)
+nmap <leader>sh <Action>(GotoAction)
 
 " Global clipboard
 set clipboard+=unnamed
