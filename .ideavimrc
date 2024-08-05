@@ -36,6 +36,8 @@ vmap <leader>la <Action>(Refactorings.QuickListPopupAction)
 nmap <leader>lr <Action>(RenameElement)
 vmap <leader>lr <Action>(RenameElement)
 
+nmap gI <Action>(GotoImplementation)
+
 " Global clipboard
 set clipboard+=unnamed
 
