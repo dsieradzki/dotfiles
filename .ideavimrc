@@ -38,6 +38,9 @@ nmap <leader>nc :NERDTreeClose<CR>
 nmap <leader>la <Action>(Refactorings.QuickListPopupAction)
 vmap <leader>la <Action>(Refactorings.QuickListPopupAction)
 
+nmap <leader>lf <Action>(ReformatCode)
+vmap <leader>lf <Action>(ReformatCode)
+
 nmap <leader>lh <Action>(ParameterInfo)
 vmap <leader>lh <Action>(ParameterInfo)
 
